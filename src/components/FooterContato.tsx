@@ -2,12 +2,13 @@ import { Mail, Linkedin, MessageSquare, Phone } from 'lucide-react';
 
 export default function FooterContato() {
   return (
-    <footer className="bg-gray-950 text-white py-8 px-6 border-t border-gray-800">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="text-sm text-gray-400 text-center md:text-left">
+    <footer className="bg-gray-950 text-white py-8 px-4 sm:px-6 border-t border-gray-800">
+      <div className="max-w-6xl mx-auto flex flex-row items-center gap-6 w-full">
+        <p className="text-sm text-gray-400 text-center break-words px-2">
           © {new Date().getFullYear()} Samuel Dev — Soluções em Desenvolvimento Full Stack
         </p>
-        <div className="flex gap-6">
+
+        <div className="flex flex-col items-center gap-4 w-full">
           <FooterLink
             icon={<Mail className="w-5 h-5" />}
             label="Email"
@@ -34,16 +35,22 @@ export default function FooterContato() {
   );
 }
 
-function FooterLink({ icon, label, link }) {
+interface FooterLinkProps {
+  icon: React.ReactNode;
+  label: string;
+  link: string;
+}
+
+function FooterLink({ icon, label, link }: FooterLinkProps) {
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition"
+      className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition max-w-full overflow-hidden px-2"
     >
       {icon}
-      <span className="text-sm">{label}</span>
+      <span className="text-sm break-words">{label}</span>
     </a>
   );
 }

@@ -1,5 +1,5 @@
-import HeroSection from './components/HeroSection';
-import Solutions from './components/SolutionsSection';
+import HeroSection from './components/HeroSection.tsx';
+import Solutions from './components/SolutionsSection.tsx';
 import Footer from './components/FooterContato';
 function App() {
   return (

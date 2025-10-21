@@ -5,7 +5,7 @@ import Background from '../assets/backgroundPage.png'
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen w-full overflow-x-hidden bg-cover bg-center flex items-center justify-center text-white px-6 overflow-hidden"
+      className="relative min-h-screen w-full overflow-x-hidden bg-cover bg-center flex items-center justify-center text-white px-4 sm:px-6 overflow-hidden"
       style={{
         backgroundImage: `url(${Background})`,
       }}
@@ -18,9 +18,9 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 text-center max-w-3xl"
+        className="relative z-10 text-center max-w-3xl w-full overflow-hidden"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-wrap w-full">
           Olá, eu sou <span className="text-cyan-400">Samuel</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8">
