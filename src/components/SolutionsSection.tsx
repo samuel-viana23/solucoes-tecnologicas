@@ -12,37 +12,37 @@ const solutions = [
   {
     title: "Site Institucional",
     description:
-      "Mostre sua empresa na internet com um site bonito, fácil de usar e que funciona em qualquer tela.",
+      "Fortaleça a presença digital da sua empresa com um site moderno, responsivo e alinhado à sua identidade profissional.",
     icon: <Globe className="w-8 h-8 text-cyan-400" />,
   },
   {
     title: "Site com Várias Páginas",
     description:
-      "Ideal para quem precisa mostrar serviços, blog, contato e outras informações de forma organizada.",
+      "Organize seus serviços, blog, formulários e conteúdos em um site estruturado, com navegação fluida e experiência otimizada.",
     icon: <Layers className="w-8 h-8 text-cyan-400" />,
   },
   {
     title: "Plataforma com Login",
     description:
-      "Crie um sistema onde seus clientes ou usuários possam se cadastrar, fazer login e acessar dados com segurança.",
+      "Desenvolvimento de sistemas com autenticação segura, gestão de usuários e integração com banco de dados para controle eficiente.",
     icon: <Database className="w-8 h-8 text-cyan-400" />,
   },
   {
     title: "Sistema Sob Medida",
     description:
-      "Se você tem uma ideia específica, desenvolvo o sistema completo do seu jeito, com segurança e escalabilidade.",
+      "Soluções personalizadas para atender demandas específicas, com foco em segurança, escalabilidade e performance profissional.",
     icon: <Lock className="w-8 h-8 text-cyan-400" />,
   },
   {
     title: "Automação e Coleta de Dados",
     description:
-      "Economize tempo com scripts que fazem tarefas repetitivas ou coletam informações de sites automaticamente.",
+      "Automatize processos e extraia informações relevantes de sites e sistemas com scripts inteligentes em Python.",
     icon: <Bot className="w-8 h-8 text-cyan-400" />,
   },
   {
     title: "Dashboards e Relatórios",
     description:
-      "Veja seus dados de forma clara e visual com gráficos interativos, usando Power BI ou soluções web.",
+      "Visualize seus dados com clareza através de dashboards interativos em Power BI ou soluções web integradas a bancos de dados.",
     icon: <BarChart3 className="w-8 h-8 text-cyan-400" />,
   },
 ];
