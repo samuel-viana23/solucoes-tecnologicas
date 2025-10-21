@@ -1,4 +1,4 @@
-import { Mail, Linkedin, MessageSquare, Phone } from 'lucide-react';
+import { Mail, Linkedin, MessageSquare } from 'lucide-react';
 
 export default function FooterContato() {
   return (
@@ -23,11 +23,6 @@ export default function FooterContato() {
             icon={<MessageSquare className="w-5 h-5" />}
             label="WhatsApp"
             link="https://wa.me/5585974007358"
-          />
-          <FooterLink
-            icon={<Phone className="w-5 h-5" />}
-            label="Telefone"
-            link="tel:+5585974007358"
           />
         </div>
       </div>
