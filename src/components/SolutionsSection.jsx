@@ -49,7 +49,7 @@ const solutions = [
 
 export default function SolutionsSection() {
   return (
-    <section  id="solucoes" className="bg-gray-950 text-white py-16 px-6">
+    <section  id="solucoes" className="bg-gray-950 text-white py-16 ">
       <h2 className="text-3xl font-bold text-center mb-12">Soluções que ofereço</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {solutions.map((solution, index) => (

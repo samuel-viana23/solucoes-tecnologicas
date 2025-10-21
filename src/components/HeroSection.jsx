@@ -5,15 +5,14 @@ import Background from '../assets/backgroundPage.png'
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen bg-cover bg-center flex items-center justify-center text-white px-6"
+      className="relative min-h-screen w-full overflow-x-hidden bg-cover bg-center flex items-center justify-center text-white px-6 overflow-hidden"
       style={{
         backgroundImage: `url(${Background})`,
       }}
-
     >
-      {/* Overlay escuro */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-gray-950"></div>
 
+      {/* Overlay escuro */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-gray-950 w-full"></div>
       {/* Conteúdo */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -35,7 +34,7 @@ export default function HeroSection() {
         >
           Ver soluções
         </a>
-        
+
       </motion.div>
 
       {/* Indicador de rolagem */}
