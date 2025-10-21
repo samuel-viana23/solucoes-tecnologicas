@@ -12,37 +12,37 @@ const solutions = [
   {
     title: "Site Institucional",
     description:
-      "Presença online com design profissional, responsivo e informativo.",
+      "Mostre sua empresa na internet com um site bonito, fácil de usar e que funciona em qualquer tela.",
     icon: <Globe className="w-8 h-8 text-cyan-400" />,
   },
   {
-    title: "Site Multi-Páginas",
+    title: "Site com Várias Páginas",
     description:
-      "Mais conteúdo e interações: serviços, blog, formulários e animações.",
+      "Ideal para quem precisa mostrar serviços, blog, contato e outras informações de forma organizada.",
     icon: <Layers className="w-8 h-8 text-cyan-400" />,
   },
   {
-    title: "Plataforma com Login e Banco de Dados",
+    title: "Plataforma com Login",
     description:
-      "Autenticação, gerenciamento de usuários e integração com banco de dados.",
+      "Crie um sistema onde seus clientes ou usuários possam se cadastrar, fazer login e acessar dados com segurança.",
     icon: <Database className="w-8 h-8 text-cyan-400" />,
   },
   {
-    title: "Sistema Completo e Personalizado",
+    title: "Sistema Sob Medida",
     description:
-      "Segurança avançada, escalabilidade e personalização total.",
+      "Se você tem uma ideia específica, desenvolvo o sistema completo do seu jeito, com segurança e escalabilidade.",
     icon: <Lock className="w-8 h-8 text-cyan-400" />,
   },
   {
-    title: "Automação e Extração de Dados",
+    title: "Automação e Coleta de Dados",
     description:
-      "Scripts em Python para automatizar tarefas e extrair dados de sites.",
+      "Economize tempo com scripts que fazem tarefas repetitivas ou coletam informações de sites automaticamente.",
     icon: <Bot className="w-8 h-8 text-cyan-400" />,
   },
   {
-    title: "Dashboards e Visualização de Dados",
+    title: "Dashboards e Relatórios",
     description:
-      "Dashboards interativos com Power BI ou web conectados a bancos de dados.",
+      "Veja seus dados de forma clara e visual com gráficos interativos, usando Power BI ou soluções web.",
     icon: <BarChart3 className="w-8 h-8 text-cyan-400" />,
   },
 ];
@@ -50,8 +50,8 @@ const solutions = [
 export default function SolutionsSection() {
   return (
     <section  id="solucoes" className="bg-gray-950 text-white py-16">
-      <h2 className="text-3xl font-bold text-center mb-12">Soluções que ofereço</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h2 className="text-3xl font-bold text-center mb-12">Soluções</h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 px-6">
         {solutions.map((solution, index) => (
           <motion.div
             key={index}

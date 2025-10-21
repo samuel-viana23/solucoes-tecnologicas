@@ -1,9 +1,33 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-// import Background from '../assets/backgroundPage.png';
 import capa from '../assets/capa.png';
 
 export default function HeroSection() {
+  const scrollToSection = () => {
+    const target = document.querySelector('#solucoes');
+    if (!target) return;
+
+    const targetY = target.getBoundingClientRect().top + window.scrollY;
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const duration = 1000;
+    let startTime: number | null = null;
+
+    const easeInOutQuad = (t: number) =>
+      t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+    const animateScroll = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      const easedProgress = easeInOutQuad(progress);
+      window.scrollTo(0, startY + distance * easedProgress);
+      if (progress < 1) requestAnimationFrame(animateScroll);
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
   return (
     <section
       className="relative min-h-screen w-full overflow-x-hidden bg-cover bg-center flex items-center justify-center text-white px-4 sm:px-6"
@@ -13,7 +37,6 @@ export default function HeroSection() {
     >
       {/* Overlay escuro */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-        {/* Fundo com gradiente escuro */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-gray-950 w-full h-full"></div>
 
         {/* Estrelas animadas */}
@@ -53,17 +76,13 @@ export default function HeroSection() {
         <p className="text-base md:text-lg text-gray-400 mb-8">
           Especialista em <span className="text-cyan-300 font-medium">React</span>, <span className="text-cyan-300 font-medium">Python</span>, <span className="text-cyan-300 font-medium">Node.js</span> e <span className="text-cyan-300 font-medium">C#</span>. Experiência sólida em APIs, bancos de dados (SQL), automações e visualizações com Power BI.
         </p>
-
-        <a
-          href="#solucoes"
-          className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
-        >
-          Ver soluções
-        </a>
       </motion.div>
 
-      {/* Indicador de rolagem */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+      {/* Indicador de rolagem com clique */}
+      <div
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer"
+        onClick={scrollToSection}
+      >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
